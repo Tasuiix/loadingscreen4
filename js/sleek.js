@@ -34,14 +34,14 @@ function DownloadingFile( fileName ) {
 	downloadedFiles++;
 	refreshProgress();
 
-	setStatus("Téléchargement des addons, maps, etc...");
+	setStatus("Downloading files...");
 }
 
 function SetStatusChanged( status ) {
-	if (status.indexOf("Téléchargement de L'addon : #") != -1) {
+	if (status.indexOf("Getting Addon #") != -1) {
 		downloadedFiles++;
 		refreshProgress();
-	}else if (status == "Envoi des Infos à Votre Serveur Roleplay...") {
+	}else if (status == "Sending client info...") {
 		setProgress(100);
 	}
 
